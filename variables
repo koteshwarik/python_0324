@@ -1,0 +1,50 @@
+>>>name = "Python"  
+>>>age = 20  
+>>>marks = 80.50  
+>>>print(name)  
+>>>print(age)  
+>>>print(marks)
+>>>print(type(name))
+>>>print(type(age))
+>>>print(type(marks)) 
+#outPut
+  python
+  20
+  80.50
+<class 'str'>
+<class 'int'>
+<class 'float'>
+  #local variables
+ # Declaring a function  
+def add():  
+    # Defining local variables. They has scope only within a function  
+    a = 200  
+    b = 350  
+    c = a + b  
+    print("The sum is:", c)  
+  
+# Calling a function  
+add()   
+#output 
+  the sum is:550
+# global variable
+  # Declare a variable and initialize it  
+x = 101  
+  
+# Global variable in function  
+def mainFunction():  
+    # printing a global variable  
+    global x  
+    print(x)  
+    # modifying a global variable  
+    x = 'Welcome'  
+    print(x)  
+  
+mainFunction()  
+print(x)  
+  #out put
+  101
+Welcome 
+Welcome 
+  
+  
