@@ -1,0 +1,11 @@
+#import the downloaded library in python
+import pywhatkit
+wno=input("whatsapp no:")
+msg=input("Message:")
+#hr=int(input("Hour(24 hours format):"))
+mnt=int(input("Minutes:"))
+#pywhatkit.sendwhatmsg():Runs a function from the imported library
+pywhatkit.sendwhatmsg("+919500000000","Happy birthday to you",5,40)
+#syntax: pywhatkit.sendwhatmsg("reciver no. with country code",
+# message, hours, minutes)
+
