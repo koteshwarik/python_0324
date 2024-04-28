@@ -1,0 +1,16 @@
+gender=str(input("enter you are geneder male /female:"))
+age=int(input("enter you are age :"))
+height=float(input("enter you are height in cm:"))
+weight=float(input("enter your weight in kgs:"))
+
+bmi=round(weight/height **2)
+if bmi<44:
+    print(f"you bmi is {bmi}, you are under weight.")
+elif 44<=bmi <59:
+     print(f"you are bmi is {bmi}, you  have normal weight.")
+elif 59<=bmi <71:
+     print(f"you are bmi is {bmi},you are slightly overweight.")
+elif 71<=bmi<85:
+     print(f"you are bmi is {bmi}, you are obses.")
+elif 85<=bmi:
+      print(f"you are bmi is {bmi}, you are clinically observe.")
