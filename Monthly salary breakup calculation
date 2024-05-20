@@ -1,0 +1,41 @@
+# calculate monthly salary
+#Basic salary is 50% of the CTC
+#HRA is 50% of the basic salary (can be customized based on the city)
+#PF is 12% of the basic salary
+#Professional tax (PT) is a fixed amount of ₹200
+
+def calculate_monthly_salary(ctc,hra_percent=50,pf_percent=12,pt=200):
+    #calculate basic salary  50%
+    basic_salary=ctc *0.5
+    #calculate HRA
+    hra=basic_salary *(hra_percent/100)
+    # calculate pf
+    pf= basic_salary *(pf_percent/100)
+    # calculate other allowances
+    other_allowances=ctc-basic_salary-hra-pf
+    # calculate  gross salary
+    gross_salary=basic_salary+hra+ other_allowances
+    # calculation deduction
+    deductions= pf + pt
+    # calculate  in hand salary
+    in_hand_salary=gross_salary-deductions
+    #calculate monthly salary
+    monthly_salary=in_hand_salary/12
+
+    return{
+        "Basic salary ":basic_salary,
+         "HRA ":hra,
+          "DA":da,
+          "PF":pf,
+           "OtherAllowance":other_allowances,
+           "Gross_salary":gross_salary,
+           "Dedcution":deductions,
+           "in_Hand_Salary":in_hand_salary,
+           "Monthly_salary":monthly_salary
+   }
+#example usage
+ctc=1200000
+salary_breakup=calculate_monthly_salary(ctc)
+print("Monthly salary breakup:")
+for key,value in salary_breakup.items():
+    print(f"{key}:{value:2f}")
